@@ -10,6 +10,45 @@
     width: $width;
 
     &:hover {
-        background-color: darken($bg-color, 10%);
+        background-color: lighten($bg-color, 1%);
+    }
+}
+
+@mixin responsive-padding($padding-mobile, $padding-tablet, $padding-desktop, $padding-large) {
+    padding: $padding-mobile;
+    @media (min-width: 480px) {
+        padding: $padding-tablet;
+    }
+    @media (min-width: 768px) {
+        padding: $padding-desktop;
+    }
+    @media (min-width: 1280px) {
+        padding: $padding-large;
+    }
+}
+
+@mixin responsive-width($width-mobile, $width-tablet, $width-desktop, $width-large) {
+    width: $width-mobile;
+    @media (min-width: 480px) {
+        width: $width-tablet;
+    }
+    @media (min-width: 768px) {
+        width: $width-desktop;
+    }
+    @media (min-width: 1280px) {
+        width: $width-large;
+    }
+}
+
+@mixin responsive-font-size($size-mobile, $size-tablet, $size-desktop, $size-large) {
+    font-size: $size-mobile;
+    @media (min-width: 480px) {
+        font-size: $size-tablet;
+    }
+    @media (min-width: 768px) {
+        font-size: $size-desktop;
+    }
+    @media (min-width: 1280px) {
+        font-size: $size-large;
     }
 }
